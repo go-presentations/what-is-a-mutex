@@ -1,0 +1,35 @@
+What is a Mutex?
+28th July 2023
+
+Simon Drake
+
+* What is a data race?
+- Multiple goroutines access the same variable concur­rently, and at least one of the accesses is a write.
+- Can cause unexpected behaviour and/or incorrect data
+
+.image thisisfine.png 500 500
+
+* Example
+.play datarace.go /^//STARTCODE/,/^//ENDCODE/
+
+* Channels
+- Channels are good for communicating between goroutines
+- We don't need to communicate between them
+- We just want to make sure only one goroutine will update the map at any given time
+
+* Mutexes to the rescue
+- Allowes "Locking" and "Unlocking"
+- Multiple reads can occur
+- Only one write can occur
+
+.image mutex.png 400 500
+
+* Adding a Mutex
+.code datarace.go /^//MAPSTART/,/^//MAPEND/
+
+* Time to code
+.image gotime.png
+
+* FAQ
+.image faq.png
+
