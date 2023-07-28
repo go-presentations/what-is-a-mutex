@@ -18,7 +18,7 @@ Simon Drake
 - We just want to make sure only one goroutine will update the map at any given time
 
 * Mutexes to the rescue
-- Allowes "Locking" and "Unlocking"
+- Allows "Locking" and "Unlocking"
 - Multiple reads can occur
 - Only one write can occur
 
