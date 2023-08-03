@@ -26,6 +26,9 @@ Simon Drake
 * Time to code
 .image gotime.png
 
+: mutexes must not be copied, so if this struct is passed around, it should be done by pointer.
+: note that the zero value of a mutex is usable as-is, so no initialization is required here.
+
 * FAQ
 .image faq.png
 
