@@ -1,0 +1,26 @@
+Data Race: {
+  shape: sequence_diagram
+
+  g1: Goroutine
+  v: Variable
+  g2: Goroutine
+
+  v."value is 0"
+
+  g1 -> v: Lock
+  g2 -> V: Lock
+  g2."Go routine blocked waiting for lock"
+
+
+  g1 -> v: Get Value
+  g1 -> v: +=10
+  g1 -> v: Unlock
+
+  g2 -> v: Get Value
+  g2 -> v: +=5
+  g2 -> v: Unlock
+
+  v."value is 15"
+
+
+}
