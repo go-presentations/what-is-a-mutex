@@ -3,6 +3,12 @@ What is a Mutex?
 
 Simon Drake
 
+* What is a goroutine?
+.code goroutine.go
+
+: lightweight thread managed by the Go runtime.
+: used for concurrency
+
 * What is a data race?
 .image datarace.png 600 600
 
